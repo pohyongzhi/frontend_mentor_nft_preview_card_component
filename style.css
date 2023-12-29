@@ -14,8 +14,129 @@
     --fw-bold: 700;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-weight: var(--fw-light);
+}
+
+body {
+    font-family: var(--ff-base);
+    font-size: 1rem;
+    background-color: var(--clr-neutral-dark-blue-main);
+    color: hsla(215, 51%, 70%, 80%);
+    padding: 1.25rem;
+    line-height: 1.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 1.5rem;
+    background-color: var(--clr-neutral-dark-blue-card);
+    border-radius: 0.75rem;
+    max-width: 350px;
+}
+
+.container article:first-child img {
+    border-radius: 0.5rem;
+}
+
+.container .container-img {
+    position: relative;
+}
+
+.container article:first-child div {
+    position: absolute;
+    height: calc(100% - 5px);
+    width: 100%;
+    top: 0;
+    background-color: hsla(178, 100%, 50%, 60%);
+    z-index: 999;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.container article:first-child div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container article:first-child div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container h2 {
+    color: var(--clr-neutral-white);
+    margin: 1rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: var(--fw-regular);
+}
+
+.container h2:hover {
+    color: var(--clr-primary-cyan);
+    cursor: pointer;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 15%);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container ul li:first-child {
+    color: var(--clr-primary-cyan);
+    opacity: 0.9;
+}
+
+.container .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.container .avatar img {
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid var(--clr-neutral-white);
+}
+
+.container .avatar p span {
+    color: var(--clr-neutral-white);
+}
+
+.container .avatar p span:hover {
+    color: var(--clr-primary-cyan);
+    cursor: pointer;
+}
+
